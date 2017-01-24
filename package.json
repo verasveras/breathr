@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lisa Veras <lisaveras@gmail.com> (http://lisaveras.com)",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
+    "nodemon": "^1.11.0",
     "path": "^0.12.7"
   }
 }
