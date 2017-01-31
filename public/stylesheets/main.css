@@ -5,6 +5,10 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
+h1 {
+	font-size: 3em;
+}
+
 div { 
 	display: inline;
  }
@@ -12,6 +16,7 @@ div {
  p {
  	display: inline;
  }
+
 
 .input {
 	background-color: #ffffff;
