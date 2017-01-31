@@ -17,6 +17,9 @@ div {
  	display: inline;
  }
 
+.label {
+	font-size: 2em;
+}
 
 .input {
 	background-color: #ffffff;

@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 		let target = event.target;
 		let className = target.classList.contains('in') ? 'in' : 'out';
 		breath[className] = Number(target.innerHTML);
+		
 		clearAll(className);
 		changeSelected(target);
 
