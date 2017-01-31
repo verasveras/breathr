@@ -10,21 +10,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 	function clearAll(){
 
-		// let inputsList = document.getElementsByClassName("input");
-		// for (var i = 0; i < inputsList.length; i++){
-		// 	inputsList[i].setAttribute('class', 'unselected');
-		// }
+		let inputsList = document.getElementsByClassName("input");
+		for (var i = 0; i < inputsList.length; i++){
+			inputsList[i].setAttribute('class', 'unselected');
+		}
 	}
 
-	function handleChange(event){
-		clearAll();
-		changeSelected(event);
-
-	}
 
 	let inputsList = document.getElementsByClassName("input");
 
 	for (var i = 0; i < inputsList.length; i++){
+		console.log('dogs');
 		inputsList[i].addEventListener('click', changeSelected);
 	}
 

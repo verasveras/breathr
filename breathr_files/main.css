@@ -1,0 +1,29 @@
+body {
+	background-color: #d8e7ff;
+	background: linear-gradient(to right, #d8e7ff, #ffffff); /* Standard syntax */
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+div { 
+	display: inline;
+ }
+
+ p {
+ 	display: inline;
+ }
+
+.input {
+	background-color: #ffffff;
+	font-size: 2em;
+	margin: 1vh;
+	padding: 2vh;
+}
+
+.selected{
+	background-color: #498fff;
+}
+
+.unselected{
+	background-color: #ffffff;
+}
