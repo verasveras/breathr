@@ -1,5 +1,20 @@
-let height = 
-let width = document.getElementById('paper-canvs');
+var width = document.getElementById('paper-canvas').offsetWidth;
+var height = document.getElementById('paper-canvas').offsetHeight;
 
-var myBall = new Path.Circle(new Point(70, 70), 50);
-myBall.fillColor = 'tomato';
+var circle = new Path.Circle(new Point(width/2, height/3), 50);
+circle.fillColor = 'tomato';
+
+var scalefactor = 0;
+ 
+function onFrame(event) {
+
+	var max = breath.out;
+	var min = breath.in;
+
+	function getScaleFactor(){
+
+	}
+
+	circle.scale(getScaleFactor);
+
+}
