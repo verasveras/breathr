@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://paperjs.org/tutorials/paths/creating-predefined-shapes/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="./Paper.js — Creating Predefined Shapes_files/style.css">
+  <link rel="icon" href="http://paperjs.org/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="http://paperjs.org/assets/favicon.ico">
+  <script type="text/javascript" async="" src="./Paper.js — Creating Predefined Shapes_files/ga.js"></script><script src="./Paper.js — Creating Predefined Shapes_files/jquery.js"></script>
+  <script src="./Paper.js — Creating Predefined Shapes_files/paper.js"></script>
+  <script src="./Paper.js — Creating Predefined Shapes_files/codemirror.js"></script>
+  <script src="./Paper.js — Creating Predefined Shapes_files/scripts.js"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10082945-6']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <title>Paper.js — Creating Predefined Shapes</title>
+</head>
+  <body cz-shortcut-listen="true">
+    <nav>
+      <h1><a href="http://paperjs.org/">Paper.js</a></h1>
+<ul>
+  <li><a href="http://paperjs.org/about/">About</a>
+  </li>
+  <li><a href="http://paperjs.org/features/">Features</a>
+  </li>
+  <li class="spacer"></li>
+  <li><a href="http://paperjs.org/examples/">Examples</a>
+  </li>
+  <li><a href="http://paperjs.org/showcase/">Showcase</a>
+  </li>
+  <li class="spacer"></li>
+  <li><a href="http://paperjs.org/tutorials/">Tutorials</a>
+<ul>
+</ul>
+  </li>
+  <li><a href="http://paperjs.org/reference/">Reference</a>
+  </li>
+  <li><a href="http://sketch.paperjs.org/">Sketch</a>
+  </li>
+  <li class="spacer"></li>
+  <li><a href="http://paperjs.org/download/">Download</a>
+  </li>
+  <li><a href="http://paperjs.org/donation/">Donation</a>
+  </li>
+  <li><a href="http://paperjs.org/license/">License</a>
+  </li>
+  <li class="spacer"></li>
+  <li><a href="http://groups.google.com/group/paperjs" target="_blank">Mailing List</a>
+  </li>
+  <li><a href="http://twitter.com/PaperJS" target="_blank">Follow on Twitter</a>
+  </li>
+  <li><a href="http://github.com/paperjs/paper.js" target="_blank">Watch on Github</a>
+  </li>
+</ul>
+    </nav>
+<article class="tutorial">
+  <h1>Creating Predefined Shapes</h1><p>
+Paper.js allows you to create path items with predefined shapes of variable dimensions.
+</p>
+<p>
+In the same way that the <tt><a href="http://paperjs.org/reference/path#path">new Path()</a></tt> constructor creates an empty path with no points, we have constructors such as <tt><a href="http://paperjs.org/reference/path#path-circle-center-radius">new Path.Circle(center, radius)</a></tt> and <tt><a href="http://paperjs.org/reference/path#path-rectangle-point-size">new Path.Rectangle(point, size)</a></tt> that create paths and automatically add segments to them to create predefined shapes.<br>
+Paper.js allows you to create path items with predefined shapes of variable dimensions.
+</p>
+<section id="circle-shaped-paths"><a name="circle-shaped-paths" title="Circle Shaped Paths" class="anchor"><h2>Circle Shaped Paths</h2></a><p>
+Using the <tt><a href="http://paperjs.org/reference/path#path-circle-center-radius">new Path.Circle(center, radius)</a></tt> constructor, we can produces circle shaped paths.
+</p><p>
+The following code produces a circle shaped path with a center point at <tt>{x: 100, y: 70}</tt> and a radius of 50 pt:
+</p><div class="paperscript split">
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+<div class="source"><div class="CodeMirror"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10px; left: 39px;"><textarea wrap="off" autocorrect="off" autocapitalize="off" style="position: absolute; padding: 0px; width: 1px; height: 1em;"></textarea></div><div class="CodeMirror-scrollbar" style="z-index: -2; visibility: hidden; display: none;"><div class="CodeMirror-scrollbar-inner"></div></div><div class="CodeMirror-scroll cm-s-default CodeMirror-focused" tabindex="-1"><div style="position: relative;"><div style="position: relative; top: 0px;"><div class="CodeMirror-gutter" style="height: 56px;"><div class="CodeMirror-gutter-text"><pre>1</pre><pre>2</pre></div></div><div class="CodeMirror-lines"><div style="position: relative; z-index: 0; outline: none; min-width: 439px; margin-left: 31px;"><div style="position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden;"><pre><span class="cm-variable">myCircle</span>.<span class="cm-property">fillColor</span> = <span class="cm-string">'black'</span>;<span> </span></pre></div><pre class="CodeMirror-cursor" style="top: 18px; left: 234px; display: none;">&nbsp;</pre><pre class="CodeMirror-cursor" style="visibility: hidden; left: 430px;">&nbsp;</pre><div style="position: relative; z-index: -1;"><div class="CodeMirror-selected" style="position: absolute; left: 0px; top: 0px; right: -1px; height: 18px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 0px; top: 18px; right: 264px; height: 18px;"></div></div><div><pre><span class="cm-keyword">var</span> <span class="cm-variable">myCircle</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Path</span>.<span class="cm-property">Circle</span>(<span class="cm-keyword">new</span> <span class="cm-variable">Point</span>(<span class="cm-number">100</span>, <span class="cm-number">70</span>), <span class="cm-number">50</span>);</pre><pre><span class="cm-variable">myCircle</span>.<span class="cm-property">fillColor</span> = <span class="cm-string">'black'</span>;</pre></div></div></div></div></div></div></div></div><script type="text/paperscript" canvas="canvas-1" data-paper-ignore="true">
+var myCircle = new Path.Circle(new Point(100, 70), 50);
+myCircle.fillColor = 'black';
+</script>
+<div class="canvas">
+<canvas height="138" id="canvas-1" width="538" style="-webkit-user-drag: none; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" data-paper-scope="1"></canvas>
+</div>
+</div></section>
+
+
+
+<section id="rectangular-shaped-paths"><a name="rectangular-shaped-paths" title="Rectangular Shaped Paths" class="anchor"><h2>Rectangular Shaped Paths</h2></a><p>
+To create a rectangular shaped path you can pass a <tt><a href="http://paperjs.org/reference/rectangle">Rectangle</a></tt> to the <tt><a href="http://paperjs.org/reference/path#path-rectangle-rect">new Path.Rectangle(rect)</a></tt> constructor.
+</p><div class="note"><h4>Please note:</h4><p>
+A <tt><a href="http://paperjs.org/reference/rectangle">Rectangle</a></tt> object is an abstract representation of a rectangle. Please read the <a href="http://paperjs.org/tutorials/geometry/point-size-and-rectangle/">Point, Size and Rectangle</a> tutorial to find out how to work with the <tt>Rectangle</tt> object.
+</p><div class="text-end"></div></div><p>
+For example, let's make a <tt>Rectangle</tt> between <tt>{x: 0, y: 0}</tt> and <tt>{x: 50, y: 50}</tt> and then use the <tt><a href="http://paperjs.org/reference/path#path-rectangle-rect">new Path.Rectangle(rect)</a></tt> constructor to create a path with the shape that it describes:
+</p><div class="paperscript split">
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+<div class="source"><div class="CodeMirror"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10px; left: 39px;"><textarea wrap="off" autocorrect="off" autocapitalize="off" style="position: absolute; padding: 0px; width: 1px; height: 1em;"></textarea></div><div class="CodeMirror-scrollbar" style="z-index: -2; visibility: hidden; display: none;"><div class="CodeMirror-scrollbar-inner"></div></div><div class="CodeMirror-scroll cm-s-default" tabindex="-1"><div style="position: relative;"><div style="position: relative; top: 0px;"><div class="CodeMirror-gutter" style="height: 92px;"><div class="CodeMirror-gutter-text"><pre>1</pre><pre>2</pre><pre>3</pre><pre>4</pre></div></div><div class="CodeMirror-lines"><div style="position: relative; z-index: 0; outline: none; min-width: 557px; margin-left: 31px;"><div style="position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden;"></div><pre class="CodeMirror-cursor" style="top: 0px; left: 0px;">&nbsp;</pre><pre class="CodeMirror-cursor" style="visibility: hidden; left: 548px;">&nbsp;</pre><div style="position: relative; z-index: -1; display: none;"></div><div><pre><span class="cm-keyword">var</span> <span class="cm-variable">rectangle</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Rectangle</span>(<span class="cm-keyword">new</span> <span class="cm-variable">Point</span>(<span class="cm-number">50</span>, <span class="cm-number">50</span>), <span class="cm-keyword">new</span> <span class="cm-variable">Point</span>(<span class="cm-number">150</span>, <span class="cm-number">100</span>));</pre><pre><span class="cm-keyword">var</span> <span class="cm-variable">path</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Path</span>.<span class="cm-property">Rectangle</span>(<span class="cm-variable">rectangle</span>);</pre><pre><span class="cm-variable">path</span>.<span class="cm-property">fillColor</span> = <span class="cm-string">'#e9e9ff'</span>;</pre><pre><span class="cm-variable">path</span>.<span class="cm-property">selected</span> = <span class="cm-atom">true</span>;</pre></div></div></div></div></div></div></div></div><script type="text/paperscript" canvas="canvas-2" data-paper-ignore="true">
+var rectangle = new Rectangle(new Point(50, 50), new Point(150, 100));
+var path = new Path.Rectangle(rectangle);
+path.fillColor = '#e9e9ff';
+path.selected = true;
+</script>
+<div class="canvas">
+<canvas height="138" id="canvas-2" width="538" style="-webkit-user-drag: none; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" data-paper-scope="2"></canvas>
+</div>
+</div></section>
+
+
+
+
+<section id="rounded-rectangles"><a name="rounded-rectangles" title="Rounded Rectangles" class="anchor"><h2>Rectangular Shaped Paths with Rounded Corners</h2></a><p>
+To create rectangular shaped paths with rounded corners, we use the <tt><a href="http://paperjs.org/reference/path#path-roundedrectangle-rect-size">new Path.RoundedRectangle(rect, size)</a></tt> constructor. The <tt>rect</tt> parameter describes the <tt><a href="http://paperjs.org/reference/rectangle">Rectangle</a></tt> and the <tt>size</tt> parameter describes the <tt><a href="http://paperjs.org/reference/size">Size</a></tt> of the rounded corners.
+</p><p>
+For example, the following script creates a rectangular shaped path with 20 pt * 20 pt corners:
+</p><div class="paperscript split">
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+<div class="source"><div class="CodeMirror"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10px; left: 39px;"><textarea wrap="off" autocorrect="off" autocapitalize="off" style="position: absolute; padding: 0px; width: 1px; height: 1em;"></textarea></div><div class="CodeMirror-scrollbar" style="z-index: -2; visibility: hidden; display: none;"><div class="CodeMirror-scrollbar-inner"></div></div><div class="CodeMirror-scroll cm-s-default" tabindex="-1"><div style="position: relative;"><div style="position: relative; top: 0px;"><div class="CodeMirror-gutter" style="height: 92px;"><div class="CodeMirror-gutter-text"><pre>1</pre><pre>2</pre><pre>3</pre><pre>4</pre></div></div><div class="CodeMirror-lines"><div style="position: relative; z-index: 0; outline: none; min-width: 557px; margin-left: 31px;"><div style="position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden;"></div><pre class="CodeMirror-cursor" style="top: 0px; left: 0px;">&nbsp;</pre><pre class="CodeMirror-cursor" style="visibility: hidden; left: 548px;">&nbsp;</pre><div style="position: relative; z-index: -1; display: none;"></div><div><pre><span class="cm-keyword">var</span> <span class="cm-variable">rectangle</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Rectangle</span>(<span class="cm-keyword">new</span> <span class="cm-variable">Point</span>(<span class="cm-number">50</span>, <span class="cm-number">50</span>), <span class="cm-keyword">new</span> <span class="cm-variable">Point</span>(<span class="cm-number">150</span>, <span class="cm-number">100</span>));</pre><pre><span class="cm-keyword">var</span> <span class="cm-variable">cornerSize</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Size</span>(<span class="cm-number">20</span>, <span class="cm-number">20</span>);</pre><pre><span class="cm-keyword">var</span> <span class="cm-variable">path</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Path</span>.<span class="cm-property">RoundRectangle</span>(<span class="cm-variable">rectangle</span>, <span class="cm-variable">cornerSize</span>);</pre><pre><span class="cm-variable">path</span>.<span class="cm-property">fillColor</span> = <span class="cm-string">'black'</span>;</pre></div></div></div></div></div></div></div></div><script type="text/paperscript" canvas="canvas-3" data-paper-ignore="true">
+var rectangle = new Rectangle(new Point(50, 50), new Point(150, 100));
+var cornerSize = new Size(20, 20);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+path.fillColor = 'black';
+</script>
+<div class="canvas">
+<canvas height="138" id="canvas-3" width="538" style="-webkit-user-drag: none; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" data-paper-scope="3"></canvas>
+</div>
+</div></section>
+
+
+
+<section id="regular-polygon-shaped-paths" style="height: auto;"><a name="regular-polygon-shaped-paths" title="Regular Polygon Shaped Paths" class="anchor"><h2>Regular Polygon Shaped Paths</h2></a><p>
+To create regular polygon shaped paths, we use the <tt><a href="http://paperjs.org/reference/path#path-regularpolygon-center-numsides-radius">new Path.RegularPolygon(center, numSides, radius)</a></tt> constructor.
+</p><p>
+The <tt><a href="http://paperjs.org/reference/point">center</a></tt> parameter describes the center point of the polygon, the <tt>numSides</tt> parameter describes the amount of sides the polygon has and the <tt>radius</tt> parameter describes the radius of the polygon.
+</p><p>
+For example, lets create a triangle shaped path and a decagon shaped path:
+</p><div class="paperscript split">
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+<div class="source"><div class="CodeMirror"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10px; left: 39px;"><textarea wrap="off" autocorrect="off" autocapitalize="off" style="position: absolute; padding: 0px; width: 1px; height: 1em;"></textarea></div><div class="CodeMirror-scrollbar" style="z-index: -2; visibility: hidden; display: none;"><div class="CodeMirror-scrollbar-inner"></div></div><div class="CodeMirror-scroll cm-s-default" tabindex="-1"><div style="position: relative;"><div style="position: relative; top: 0px;"><div class="CodeMirror-gutter" style="height: 182px;"><div class="CodeMirror-gutter-text"><pre>1</pre><pre>2</pre><pre>3</pre><pre>4</pre><pre>5</pre><pre>6</pre><pre>7</pre><pre>8</pre><pre>9</pre></div></div><div class="CodeMirror-lines"><div style="position: relative; z-index: 0; outline: none; min-width: 525px; margin-left: 31px;"><div style="position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden;"></div><pre class="CodeMirror-cursor" style="top: 0px; left: 0px;">&nbsp;</pre><pre class="CodeMirror-cursor" style="visibility: hidden; left: 516px;">&nbsp;</pre><div style="position: relative; z-index: -1; display: none;"></div><div><pre><span class="cm-comment">// Create a triangle shaped path </span></pre><pre><span class="cm-keyword">var</span> <span class="cm-variable">triangle</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Path</span>.<span class="cm-property">RegularPolygon</span>(<span class="cm-keyword">new</span> <span class="cm-variable">Point</span>(<span class="cm-number">80</span>, <span class="cm-number">70</span>), <span class="cm-number">3</span>, <span class="cm-number">50</span>);</pre><pre><span class="cm-variable">triangle</span>.<span class="cm-property">fillColor</span> = <span class="cm-string">'#e9e9ff'</span>;</pre><pre><span class="cm-variable">triangle</span>.<span class="cm-property">selected</span> = <span class="cm-atom">true</span>;</pre><pre> </pre><pre><span class="cm-comment">// Create a decagon shaped path </span></pre><pre><span class="cm-keyword">var</span> <span class="cm-variable">decagon</span> = <span class="cm-keyword">new</span> <span class="cm-variable">Path</span>.<span class="cm-property">RegularPolygon</span>(<span class="cm-keyword">new</span> <span class="cm-variable">Point</span>(<span class="cm-number">200</span>, <span class="cm-number">70</span>), <span class="cm-number">10</span>, <span class="cm-number">50</span>);</pre><pre><span class="cm-variable">decagon</span>.<span class="cm-property">fillColor</span> = <span class="cm-string">'#e9e9ff'</span>;</pre><pre><span class="cm-variable">decagon</span>.<span class="cm-property">selected</span> = <span class="cm-atom">true</span>;</pre></div></div></div></div></div></div></div></div><script type="text/paperscript" canvas="canvas-4" data-paper-ignore="true">
+// Create a triangle shaped path 
+var triangle = new Path.RegularPolygon(new Point(80, 70), 3, 50);
+triangle.fillColor = '#e9e9ff';
+triangle.selected = true;
+
+// Create a decagon shaped path 
+var decagon = new Path.RegularPolygon(new Point(200, 70), 10, 50);
+decagon.fillColor = '#e9e9ff';
+decagon.selected = true;
+</script>
+<div class="canvas">
+<canvas height="138" id="canvas-4" width="538" style="-webkit-user-drag: none; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" data-paper-scope="4"></canvas>
+</div>
+</div><div class="note"><h4>Did you know?</h4><p>
+You can check the constructors section of the <tt><a href="http://paperjs.org/reference/path">Path reference</a></tt> for a full list of Path constructors.
+</p><div class="text-end"></div></div></section>
+
+
+
+
+
+</article>
+<aside>
+<h1>Index</h1>
+<ul class="tutorial-index">
+  <li class="expandable-list"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#" class="arrow"></a><b><a href="http://paperjs.org/tutorials/getting-started/">Getting Started</a></b>
+<ul class="tutorial-index">
+  <li><a href="http://paperjs.org/tutorials/getting-started/working-with-paper-js/">Working with Paper.js</a></li>
+  <li><a href="http://paperjs.org/tutorials/getting-started/using-javascript-directly/">Using JavaScript Directly</a></li>
+  <li><a href="http://paperjs.org/tutorials/getting-started/paperscript-interoperability/">PaperScript Interoperability</a></li>
+</ul>
+  </li>
+  <li class="expandable-list"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#" class="arrow"></a><b><a href="http://paperjs.org/tutorials/geometry/">Geometry</a></b>
+<ul class="tutorial-index">
+  <li><a href="http://paperjs.org/tutorials/geometry/point-size-and-rectangle/">Point, Size and Rectangle</a></li>
+  <li><a href="http://paperjs.org/tutorials/geometry/object-conversion/">Object Conversion</a></li>
+  <li><a href="http://paperjs.org/tutorials/geometry/mathematical-operations/">Mathematical Operations</a></li>
+  <li><a href="http://paperjs.org/tutorials/geometry/vector-geometry/">Vector Geometry</a></li>
+</ul>
+  </li>
+  <li class="expandable-list expanded"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#" class="arrow"></a><b><a href="http://paperjs.org/tutorials/paths/">Paths</a></b>
+<ul class="tutorial-index">
+  <li><a href="http://paperjs.org/tutorials/paths/working-with-path-items/">Working with Path Items</a></li>
+  <li class="active"><span>Creating Predefined Shapes</span></li>
+  <li><a href="http://paperjs.org/tutorials/paths/using-color-and-style/">Using Color and Style</a></li>
+  <li><a href="http://paperjs.org/tutorials/paths/smoothing-simplifying-flattening/">Smoothing, Simplifying &amp; Flattening</a></li>
+</ul>
+  </li>
+  <li class="expandable-list"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#" class="arrow"></a><b><a href="http://paperjs.org/tutorials/interaction/">Interaction</a></b>
+<ul class="tutorial-index">
+  <li><a href="http://paperjs.org/tutorials/interaction/creating-mouse-tools/">Creating Mouse Tools</a></li>
+  <li><a href="http://paperjs.org/tutorials/interaction/mouse-tool-events/">Mouse Tool Events</a></li>
+  <li><a href="http://paperjs.org/tutorials/interaction/working-with-mouse-vectors/">Working with Mouse Vectors</a></li>
+  <li><a href="http://paperjs.org/tutorials/interaction/keyboard-interaction/">Keyboard Interaction</a></li>
+</ul>
+  </li>
+  <li class="expandable-list"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#" class="arrow"></a><b><a href="http://paperjs.org/tutorials/project-items/">Project &amp; Items</a></b>
+<ul class="tutorial-index">
+  <li><a href="http://paperjs.org/tutorials/project-items/working-with-items/">Working with Items</a></li>
+  <li><a href="http://paperjs.org/tutorials/project-items/transforming-items/">Transforming Items</a></li>
+  <li><a href="http://paperjs.org/tutorials/project-items/project-hierarchy/">Project Hierarchy</a></li>
+  <li><a href="http://paperjs.org/tutorials/project-items/working-with-symbols/">Working with Symbols</a></li>
+</ul>
+  </li>
+  <li class="expandable-list"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#" class="arrow"></a><b><a href="http://paperjs.org/tutorials/images/">Images</a></b>
+<ul class="tutorial-index">
+  <li><a href="http://paperjs.org/tutorials/images/working-with-rasters/">Working with Rasters</a></li>
+  <li><a href="http://paperjs.org/tutorials/images/using-pixel-colors/">Using Pixel Colors</a></li>
+  <li><a href="http://paperjs.org/tutorials/images/color-averaging-image-areas/">Color Averaging Image Areas</a></li>
+</ul>
+  </li>
+  <li class="expandable-list"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#" class="arrow"></a><b><a href="http://paperjs.org/tutorials/animation/">Animation</a></b>
+<ul class="tutorial-index">
+  <li><a href="http://paperjs.org/tutorials/animation/creating-animations/">Creating Animations</a></li>
+</ul>
+  </li>
+</ul>
+<div class="sticky"><div>
+  <h1>Content</h1>
+  <ul class="toc"><li class="entry selector active"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#circle-shaped-paths">Circle Shaped Paths</a></li><li class="entry selector"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#rectangular-shaped-paths">Rectangular Shaped Paths</a></li><li class="entry selector"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#rounded-rectangles">Rounded Rectangles</a></li><li class="entry selector"><a href="http://paperjs.org/tutorials/paths/creating-predefined-shapes/#regular-polygon-shaped-paths">Regular Polygon Shaped Paths</a></li></ul>
+</div></div>
+</aside>
+  
+</body></html>

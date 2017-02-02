@@ -2,15 +2,35 @@
 <html>
 	<head>
 		<meta charset=utf-8>
-		<title>Breathr</title>
+		<title>breathr</title>
 		<style>
 			body { margin: 0; }
 			canvas { width: 100%; height: 100% }
 		</style>
 		<script type="text/javascript" src="/paperjs"></script>
-		<script type="text/paperscript" src="/js/index.js" canvas="paper-canvas" ></script>
+		<script type="text/paperscript" src="/js/paper.js" canvas="paper-canvas" ></script>
+		<script type="text/javascript" src="/js/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	</head>
 	<body>
-		<canvas id="paper-canvas"></canvas>
+		<h1>b r e a t h r </h1>
+		<p class="label">In: </p>
+		<div class="input" id="in">
+			<div class="in">1</div>
+			<div class="in">2</div>
+			<div class="in">3</div>
+			<div class="in">4</div>
+		</div>
+		<h1></h1>
+		<p class="label">Out: </p>
+		<div class="input" id="out">
+			<div class="out">1</div>
+			<div class="out">2</div>
+			<div class="out">3</div>
+			<div class="out">4</div>
+		</div>
+		<canvas id="paper-canvas">	
+		</canvas>
 	</body>
 </html>
