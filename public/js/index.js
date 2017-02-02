@@ -1,7 +1,9 @@
 let breath = {
-	in: 0,
-	out: 0
+	in: 1,
+	out: 1
 };
+
+let radius = 50;
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 	function handleChange(event){
 
+		radius = 50;
 		let target = event.target;
 		let className = target.classList.contains('in') ? 'in' : 'out';
 		breath[className] = Number(target.innerHTML);
