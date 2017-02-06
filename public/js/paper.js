@@ -44,10 +44,17 @@ function onFrame(event) {
 	circle.remove();
 	// circle = new Path.Circle(new Point(width/2, height/3), 55 * (Math.sin(event.time) + 2));
 
-
-	if (event.time % max < inB) radius += 5;
-	else radius -= 5;
-
+	var instep = 2 / inB;
+	var outstep = 2 / outB;
+	// if (!step) step = max;
+	if (event.time % max <= inB){
+		console.log('im adding', instep)
+		radius +=  instep;
+	}
+	else {
+		console.log('im subtracting', outstep)
+		radius -= outstep;
+	}
 
 	circle = new Path.Circle(new Point(width/2, height/3), radius);
 	circle.fillColor = 'tomato';
