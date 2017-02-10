@@ -7,7 +7,17 @@ circle.fillColor = 'tomato';
 var scaleFactor = 1;
 var once = 1;
 
+var test = function (){
+	console.log('i was called')
+}
 
+var resetAnimation = function(){
+	circle.remove();
+	circle = new Path.Circle(new Point(width/2, height/3), START_RADIUS);
+	circle.fillColor = 'tomato';
+}
+
+var diff = 0;
 
 function onFrame(event) {
 
@@ -15,31 +25,11 @@ function onFrame(event) {
 	var inB = breath.in;
 	var outB = breath.out;
 
-	// var max = breath.out;
-
-	// function getScaleFactor(){
-
-	// 	return scaleFactor < max ? increase() : decrease()
-	// }
-
-	// function increase(){
-	// 	return scaleFactor++;
-
-	// }
-
-	// function decrease(){
-	// 	return scaleFactor - 1 == 1 ? 1 : scaleFactor--;
-	// }
-
-	// if (!once) {
-	// 	once++;
-	// 	circle.scale(4);
-	// }
-
-	// sin(event.time);
-
-	// circle.scale(Math.sin(event.count) + 2);
-	// console.log(Math.sin(event.count) + 2);
+	if (reset){
+		resetAnimation();
+		diff = event.time;
+		reset = false;
+	}
 
 	circle.remove();
 	// circle = new Path.Circle(new Point(width/2, height/3), 55 * (Math.sin(event.time) + 2));
@@ -47,16 +37,18 @@ function onFrame(event) {
 	var instep = 2 / inB;
 	var outstep = 2 / outB;
 	// if (!step) step = max;
-	if (event.time % max <= inB){
-		console.log('im adding', instep)
+	if ((event.time - diff) % max <= inB){
+		// console.log('im adding', instep)
 		radius +=  instep;
 	}
 	else {
-		console.log('im subtracting', outstep)
+		// console.log('im subtracting', outstep)
 		radius -= outstep;
 	}
 
 	circle = new Path.Circle(new Point(width/2, height/3), radius);
 	circle.fillColor = 'tomato';
+
+	// resetAnimation();
 
 }

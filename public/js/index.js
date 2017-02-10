@@ -3,7 +3,9 @@ let breath = {
 	out: 1
 };
 
-let radius = 50;
+const START_RADIUS = 50;
+let radius = START_RADIUS;
+let reset = false;
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 		let target = event.target;
 		let className = target.classList.contains('in') ? 'in' : 'out';
 		breath[className] = Number(target.innerHTML);
-		
+		reset = true;
 		clearAll(className);
 		changeSelected(target);
 
