@@ -2,31 +2,23 @@ body {
 	background-color: #d8e7ff;
 	background: linear-gradient(to right, #d8e7ff, #ffffff);
 	text-align: center;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
 	font-size: 3em;
 	font-weight: normal;
-	/*font-family: 'Noto Sans', sans-serif;*/
-}
-
-div.btn-group {
-	display: inline-block;
+	font-family: 'Raleway', sans-serif;
 }
 
 .selected{
 	background-color: #498fff;
 }
-.unselected{
-	background-color: #498fff;
-}
 
 .infobox {
-	margin: 2vh;
-	width: 50%;
+	margin: 1vw 20vw 0vw 20vw;
 }
 
 .miniheader{
-	margin: 2vh;
+	margin: 1vw auto 0vw auto;
 }
