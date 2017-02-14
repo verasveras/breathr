@@ -1,6 +1,6 @@
 let breath = {
-	in: 1,
-	out: 1
+	in: 4,
+	out: 4
 };
 
 const START_RADIUS = 50;

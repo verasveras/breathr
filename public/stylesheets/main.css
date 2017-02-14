@@ -1,37 +1,25 @@
 body {
 	background-color: #d8e7ff;
-	background: linear-gradient(to right, #d8e7ff, #ffffff); /* Standard syntax */
+	background: linear-gradient(to right, #d8e7ff, #ffffff);
 	text-align: center;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
-	font-size: 3em;
-}
-
-div { 
-	display: inline;
- }
-
- p {
- 	display: inline;
- }
-
-.label {
-	font-size: 2em;
-}
-
-.input {
-	background-color: #ffffff;
-	font-size: 2em;
-	/*margin: 1vh;*/
-	/*padding: 2vh;*/
+	font-size: 4em;
+	font-weight: normal;
+	font-family: 'Raleway', sans-serif;
 }
 
 .selected{
 	background-color: #498fff;
 }
 
-.unselected{
-	background-color: #498fff;
+.infobox {
+	margin: 1vw 20vw 0vw 20vw;
+	font-size: 1em;
+}
+
+.miniheader{
+	margin: 1vw auto 0vw auto;
 }
