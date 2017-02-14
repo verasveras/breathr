@@ -7,43 +7,26 @@ body {
 
 h1 {
 	font-size: 3em;
+	font-weight: normal;
+	/*font-family: 'Noto Sans', sans-serif;*/
 }
-
-/*div { 
-	display: inline-block;
- }*/
-
-/* p {
- 	display: inline;
- }*/
-
-.label {
-	font-size: 2em;
-	color: black;
-}
-
-/*.input {
-	background-color: #ffffff;
-	font-size: 2em;
-}*/
-
-
-/*.in, .out {
-	border-radius: 50%; 
-	margin: 5px;
-	padding: 5px;
-	border: 1px solid black;
-
-}*/
-
 
 div.btn-group {
 	display: inline-block;
 }
+
 .selected{
 	background-color: #498fff;
 }
-
 .unselected{
 	background-color: #498fff;
+}
+
+.infobox {
+	margin: 2vh;
+	width: 50%;
+}
+
+.miniheader{
+	margin: 2vh;
 }

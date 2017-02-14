@@ -13,11 +13,11 @@
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"
   			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   			crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Raleway" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
 
 	</head>
 	<body>
@@ -29,15 +29,14 @@
 				<span class="glyphicon glyphicon-info-sign"></span>
 			</button>
 			<div id="settings" class="collapse">
-				<p>In: </p>
+				<p class="miniheader">Inhale Duration: </p>
 				<div class="input btn-group" id="in">
 					<button class="btn btn-secondary in">1</button>
 					<button class="btn btn-secondary in">2</button>
 					<button class="btn btn-secondary in">3</button>
 					<button class="btn btn-secondary in">4</button>
 				</div>
-				<br/>
-				<p>Out: </p>
+				<p class="miniheader">Exhale Duration: </p>
 				<div class="input btn-group" id="out">
 					<button class="btn btn-secondary out">1</button>
 					<button class="btn btn-secondary out">2</button>
@@ -45,8 +44,8 @@
 					<button class="btn btn-secondary out">4</button>
 				</div>
 			</div>
-			<div id="info" class="collapse">
-				Breathr is an application.
+			<div id="info" class="collapse" class="infobox">
+				Breathr is a relaxation tool that helps you breath in predictable and controllable way. Studies show that breathwork can help you reduce stress, manage anxiety, and feel more focused. With Breathr, you simply inhale while the circle is growing and exhale as it gets smaller. <br/> <br/> Breather gives you the power to control the lengths of your inhales and exhales to personalize you breathwork. For a starting point, we suggest setting your inhale-to-exhale ratio to 1-to-2 for 10 breaths, but play around with different configurations and see what works for you!
 			</div>
 
 		<canvas id="paper-canvas">
