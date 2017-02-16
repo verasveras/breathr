@@ -32,23 +32,54 @@ function onFrame(event) {
 	}
 
 	circle.remove();
-
+	//radius
 	var instep = 2 / inB;
 	var outstep = 2 / outB;
-	var color; 
+	var color;
 
+/*
+	light blue: rgb(172,193,212)
+	dark blue: rgb(103,139,153)
+	turquoise: rgb(28,121,128)
+*/
+
+	// colors
+	var startRed = 172;
+	var endRed = 103;
+	var diffRed = startRed - endRed;
+
+	var startGreen = 193;
+	var endGreen = 139;
+	var diffGreen = startGreen - endGreen;
+
+	var startBlue = 212;
+	var endBlue = 153;
+	var diffBlue = startBlue - endBlue;
+
+	var red = startRed;
+	var blue = startBlue;
+	var green = startGreen;
+
+
+	//calculate next radius and color
 	if ((event.time - diff) % max < inB) {
 		radius +=  instep;
-		color = new Color(0, 30/radius, 20/radius); 
+		red += diffRed / inB;
+		green += diffGreen / inB;
+		blue += diffBlue/ inB;
+
 	}
 	else if ((event.time - diff) % max > inB){
 		radius -= outstep;
-		color = new Color(0, 30/radius, 20/radius); 
+		red -= diffRed / outB;
+		green -= diffGreen / outB;
+		blue -= diffBlue/ outB;
 	}
-	
-	circle.remove(); 
+	console.log('r', red, 'g', green, 'b', blue)
+	//draw next circle
+	circle.remove();
 	circle = new Path.Circle(new Point(width/2, height/3), radius);
-	circle.fillColor = color;
+	circle.fillColor = new Color(red/255,green/255,blue/255);
 
 
 }
