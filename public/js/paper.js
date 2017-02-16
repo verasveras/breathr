@@ -17,7 +17,7 @@ var resetAnimation = function(){
 	circle.fillColor = 'tomato';
 }
 
-var diff = 0;
+var diff, now;
 
 function onFrame(event) {
 
@@ -27,7 +27,7 @@ function onFrame(event) {
 
 	if (reset){
 		resetAnimation();
-		diff = event.time;
+		// diff = event.time;
 		reset = false;
 	}
 
@@ -62,14 +62,16 @@ function onFrame(event) {
 
 
 	//calculate next radius and color
-	if ((event.time - diff) % max < inB) {
+	now = Date.now();
+	diff = startTime ? (now - startTime) / 1000 : 0;
+	if (diff % max < inB) {
 		radius +=  instep;
 		red += diffRed / inB;
 		green += diffGreen / inB;
 		blue += diffBlue/ inB;
 
 	}
-	else if ((event.time - diff) % max > inB){
+	else if (diff % max > inB){
 		radius -= outstep;
 		red -= diffRed / outB;
 		green -= diffGreen / outB;
